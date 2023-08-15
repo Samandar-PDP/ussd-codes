@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ussd_codes/model/operator.dart';
+import 'package:ussd_codes/screen/first_screen.dart';
 import 'package:ussd_codes/widget/operator_item.dart';
 
 class OperatorsScreen extends StatelessWidget {
@@ -24,9 +25,12 @@ class OperatorsScreen extends StatelessWidget {
                     crossAxisCount: 2,
                     mainAxisSpacing: 12,
                     crossAxisSpacing: 12,
-                    childAspectRatio: 3 / 2
+                    childAspectRatio: 2 / 2
                 ),
-                itemBuilder: (context, index) => OperatorItem(operator: operatorList[index]),
+                itemBuilder: (context, index) => 
+                    OperatorItem(operator: operatorList[index], onClick: (operator) {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => FirstScreen(operator: operator,)));
+                }),
               )
             ],
           ),     )
