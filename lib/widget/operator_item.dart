@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:ussd_codes/model/operator.dart';
 
 class OperatorItem extends StatelessWidget {
-  const OperatorItem({super.key, required this.operator, required this.onClick});
+
   final Operator operator;
   final void Function(Operator operator) onClick;
+
+  const OperatorItem({Key? key, required this.operator, required this.onClick}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

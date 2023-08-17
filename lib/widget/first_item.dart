@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ussd_codes/model/first_model.dart';
 
 class FirstItem extends StatelessWidget {
-  const FirstItem({super.key, required this.firstModel});
   final FirstModel firstModel;
+
+  const FirstItem({Key? key, required this.firstModel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

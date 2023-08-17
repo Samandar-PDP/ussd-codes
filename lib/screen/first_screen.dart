@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ussd_codes/model/operator.dart';
 
 class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key, required this.operator});
   final Operator operator;
+
+  const FirstScreen({Key? key, required this.operator}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

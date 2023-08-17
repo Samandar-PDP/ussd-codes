@@ -5,7 +5,8 @@ import 'package:ussd_codes/screen/first_screen.dart';
 import 'package:ussd_codes/widget/operator_item.dart';
 
 class OperatorsScreen extends StatelessWidget {
-  const OperatorsScreen({super.key});
+  const OperatorsScreen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
