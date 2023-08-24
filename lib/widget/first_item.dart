@@ -3,8 +3,8 @@ import 'package:ussd_codes/model/first_model.dart';
 
 class FirstItem extends StatelessWidget {
   final FirstModel firstModel;
-
-  const FirstItem({Key? key, required this.firstModel}) : super(key: key);
+  final void Function(FirstModel firstModel) onClick;
+  const FirstItem({Key? key, required this.firstModel, required this.onClick}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class FirstItem extends StatelessWidget {
       surfaceTintColor: Colors.white,
       clipBehavior: Clip.hardEdge,
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          onClick(firstModel);
+        },
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Center(
